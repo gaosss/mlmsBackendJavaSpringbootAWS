@@ -69,6 +69,7 @@ public class MusicManagementController {
 
 
         } catch (Exception e) {
+            System.out.println("exception");
             System.out.println(e.getMessage());
 
         }
@@ -117,7 +118,7 @@ public class MusicManagementController {
 
 
 
-    @CrossOrigin("http://localhost:4200")
+    @CrossOrigin
     @RequestMapping(method = RequestMethod.PUT, path="/update/{id}")
     @Transactional
     public @ResponseBody int updateSong(@RequestParam String name,
